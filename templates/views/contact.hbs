@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title></title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body style="background: #F0EFFF;">
+    {{>Navbar}}
+
+    {{#if success}}
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!!</strong> {{ success }}
+    </div>
+    {{/if}}
+
+    <h1 class="text-center pt-5">Contact</h1>
+    <p class="text-center">For more information, Kindly fill the below form.</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><img
+                    src="https://media.istockphoto.com/vectors/young-man-sitting-in-the-street-and-working-with-laptop-flat-modern-vector-id1205700411?k=6&m=1205700411&s=612x612&w=0&h=DdgyhtwvOpPJ1RCuvPOWNOI2JrTfHfJpA5GlwWG_Xtc="
+                    width="440">
+            </div>
+            <div class="col-md-8">
+                <div class="jumbotron bg-white">
+                    <form action="/contact" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" placeholder="Enter name" id="name" name="name"
+                                value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email"
+                                value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">Message:</label>
+                            <input type="text" class="form-control" placeholder="Enter Message" id="msg" name="msg"
+                                value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #653186;">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row py-5 text-center">
+            <div class="col-md-4">
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <i class='fas fa-phone-alt pb-4' style='font-size:48px;'></i>
+                    <h2>Contact</h2>
+                    <a href="tel:7566427817">7566427817</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <i class='fas fa-envelope pb-4' style='font-size:48px;'></i>
+                    <h2>Email</h2>
+                    <a href="mailto:lightningCafe@gmail.com">lightningCafe@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-home pb-4" style='font-size:48px;'></i>
+                    <h2>Address</h2>
+                    <a>50, Shree Sai Vihar Colony, Near Arvindo, Indore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.391813957669!2d75.89354141473186!3d22.750836185091405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302aa0cd59c5d%3A0x57ef6ab67c13ea2b!2sVijay%20Nagar%20Square%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1594729722369!5m2!1sen!2sin"
+        width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+
+    {{>footer}}
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

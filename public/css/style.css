@@ -1,0 +1,16 @@
+.bg-light {
+    background-image: url(https://www.10wallpaper.com/wallpaper/1366x768/1801/Cafe_vintage_lighting_HD_closeup_1366x768.jpg);
+    height: 60vh;
+    width: 100%;
+}
+.blur {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px);
+    height: 60vh;
+    width: 100%;
+}
+img {
+    width: 900px;
+    height: 500px;
+    object-fit: cover;
+  }

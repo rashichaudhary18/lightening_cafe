@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body style="background: #F0EFFF;">
+    {{>Navbar}}
+
+    <div class="container">
+        <h1 class="text-center p-5">Cart</h1>
+        <table class="table table-striped bg-light text-center rounded">
+
+            <thead>
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each menu1.menu1.id}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <td></td>
+                    <td><strong>Total</strong></td>
+                    <td>Rs.</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-success text-center" style="float: right; width: 350px;">Process</button>
+    </div>
+</body>
+
+</html>

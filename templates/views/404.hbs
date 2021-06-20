@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="erroricon.png" />
+    <title></title>
+</head>
+
+<body style="background: #F0EFFF;">
+    {{>Navbar}}
+    <div class="container text-center p-5">
+        <img src="erroricon.png" class="my-auto py-5" style="height: 350px; width: 280px; object-fit: cover;">
+        <h1>{{errorcomment}}</h1>
+    </div>
+
+    {{>footer}}
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /*text-shadow: 1px 1px 0 #000;*/
+        }
+
+        html {
+            min-height: 100vh;
+            /* font-size: 18px;*/
+        }
+
+        .row {
+            /*display: -webkit-flex;
+            display: -ms-flex;*/
+            display: flex;
+            flex-direction: row;
+            /*margin-bottom: 50px;*/
+        }
+
+        .container2>* {
+            border: 1px solid black;
+            width: 300px;
+            /*height: 400px;*/
+            border-radius: 10px;
+            /*padding: 30px;
+        	margin: 15px;*/
+            /*text-align: center;*/
+            justify-content: space-between;
+        }
+
+        .container2>div:hover {
+            background-color: rgba(200, 200, 200, 0.25);
+        }
+
+        .container2 {
+            display: flex;
+            flex-flow: row wrap;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+        }
+
+        .outlined {
+            /*border: 1px solid black;*/
+            margin-bottom: 50px;
+        }
+
+        .img {
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            width: 300px;
+            height: 250px;
+        }
+
+        p,
+        h4 {
+            margin: 10px 10px;
+        }
+
+        .com {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btun {
+            background-color: #653186;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            height: 30px;
+            width: 100px;
+            margin: 0 100px 0 100px;
+        }
+
+        .container1 {
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 300px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body style="background: #F0EFFF;">
+    {{>Navbar}}
+    {{#if message1}}
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!!</strong> {{ message1 }}
+    </div>
+    {{/if}}
+    <div class="container">
+        <h1 class="text-center p-5">Blog</h1>
+        <div class="container1">
+            <form action="/blog" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" id="image" class="mx-3 py-3 form-control-file">
+                <h4>
+                    <input type="text" class="form-control" placeholder="Enter name" id="name" name="name" value="">
+                    <small>
+                        <i class="ml-2">
+                            Posted on
+                            <input type="date" class="form-control" name="somedate" placeholder="Enter date"
+                                id="somedate" autocomplete="off" value="">
+                        </i>
+                    </small>
+                </h4>
+                <p><textarea id="msg" name="msg" row="5" cols="35" placeholder="Reviews"
+                        class="form-control"></textarea>
+                </p>
+                <input type="submit" name="insert" id="insert" value="Insert" class="btun">
+            </form>
+        </div><br>
+
+        <div class="row container2 outlined" style="margin: 0;">
+            {{#each items}}
+            <div class="com">
+                <div class="">
+                    <img class="img" src={{filename}}>
+                    <h4 class="mt-3">{{name}} <small><i>Posted on {{somedate}}</i></small></h4>
+                    <p class="mt-2">{{msg}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script> var today = new Date().toISOString().split('T')[0];
+        document.getElementsByName("somedate")[0].setAttribute('min', today);</script>
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

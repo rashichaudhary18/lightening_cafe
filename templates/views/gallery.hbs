@@ -1,0 +1,128 @@
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <title></title>
+        <style>
+                * {
+                        box-sizing: border-box;
+                        /*text-shadow: 1px 1px 0 #000;*/
+                }
+
+                html {
+                        min-height: 100vh;
+                        /* font-size: 18px;*/
+                }
+
+                .row1 {
+                        /*display: -webkit-flex;
+            display: -ms-flex;*/
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 50px;
+                }
+
+                .container1>* {
+                        /* border: 1px solid black;*/
+                        width: 350px;
+                        height: 300px;
+                        border-radius: 10px;
+                        /*padding: 30px;*/
+                        margin: 5px;
+                        text-align: center;
+                        justify-content: space-between;
+                }
+
+                .container1>div:hover {
+                        background-color: rgba(200, 200, 200, 0.25);
+                }
+
+                .container1 {
+                        display: flex;
+                        flex-flow: row wrap;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        align-content: flex-start;
+                }
+
+                .outlined {
+                        /* border: 1px solid black;*/
+                        margin-bottom: 50px;
+                }
+
+                .img {
+                        border-radius: 5px;
+                        object-fit: cover;
+                        width: 350px;
+                        height: 300px;
+                        border-radius: 5px;
+                        " 
+
+                }
+        </style>
+</head>
+
+<body style="background: #F0EFFF;">
+        {{>Navbar}}
+        <h1 class="text-center p-5">Gallery
+                <div class="container text-center mt-5">
+                        <div class="row1 container1 outlined">
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2019/10/Blog-10.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://www.rewardsnetwork.com/wp-content/uploads/2016/12/IndianFood_Main.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://sukhis.com/wp-content/uploads/2017/06/Appetizers.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/1a/87/aa/30/khan-s-indian-cuisine.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhcyxXv3psqYBH7Kr7wvLjRKP_UYeXc1GKhGaV2Hj8VhPZPrM1ORMix1ApEv1smhOP7q8&usqp=CAU"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://blog.raynatours.com/wp-content/uploads/2015/03/Masala-Dosa.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="http://feenix.co.in/wp-content/uploads/2018/03/maxresdefault.jpg"
+                                                class="img">
+                                </div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://img.buzzfeed.com/buzzfeed-static/static/2014-06/23/15/campaign_images/webdr07/26-traditional-indian-foods-that-will-change-your-1-7312-1403550756-15_big.jpg?:*"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://img.buzzfeed.com/buzzfeed-static/static/2013-11/enhanced/webdr03/18/17/enhanced-buzz-22126-1384812593-32.jpg?:"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://foodiewish.com/wp-content/uploads/2020/05/Dates-Rasmalai-Recipe.jpg"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://image.freepik.com/free-photo/samosa_57665-4243.jpg"
+                                                class="img">
+                                </div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlpWsz_HQs-lZ_Vu_WpnX4lT2C8BF-pKnrpw&usqp=CAU"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPnLqmZHITnUOHujsMuDDUZ2nukEqqFkaCnA&usqp=CAU"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwG63zgBhGEx8V6EHMr85zQW1vohS3f5jkRw&usqp=CAU"
+                                                class="img"></div>
+                                <div data-aos="zoom-in" data-aos-delay="400"><img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2zJMG_sTbq5oOI8QWEP1-XyxB_G7X6sluOg&usqp=CAU"
+                                                class="img"></div>
+
+                        </div>
+                </div>
+        </h1>
+        {{>footer}}
+        <script src="../jq/jquery.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

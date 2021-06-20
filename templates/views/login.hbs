@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title></title>
+</head>
+
+<body style="background: #F0EFFF;">
+    {{>Navbar}}
+    {{#if message2}}
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!!</strong> {{ message2 }}
+    </div>
+    {{/if}}
+    <h1 class="text-center p-5">Login</h1>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-md-4"><img
+                    src="https://media.istockphoto.com/vectors/people-register-online-registration-or-sign-up-user-interface-users-vector-id1210116890?k=6&m=1210116890&s=612x612&w=0&h=ZzB-GIu7QahEz4gRa8_lsQSqxZ7KxPc4f_DbuTjD-8A="
+                    height="403" width="417">
+            </div>
+            <div class="col-md-8">
+                <div class="jumbotron bg-white">
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email" name="email"
+                                value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" placeholder="Enter password" id="password"
+                                name="password" value="">
+                        </div>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #653186;">Login</button><br><br>
+                        <p>New User? First <a href="/register" style="color:#653186;">Register</a> Yourself </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>
